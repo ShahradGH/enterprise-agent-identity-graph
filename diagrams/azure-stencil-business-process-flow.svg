@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 850" width="1400" height="850" style="background:#080D1A; font-family:'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;">
+  <defs>
+    <filter id="procShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Banner -->
+  <rect x="30" y="20" width="1340" height="70" rx="8" fill="#0B132B" stroke="#1E293B" stroke-width="1.5"/>
+  <text x="60" y="62" fill="#FFFFFF" font-size="22" font-weight="700">BUSINESS PROCESS &amp; SOVEREIGN VETO WORKFLOW</text>
+  <rect x="1050" y="38" width="290" height="34" rx="17" fill="#F59E0B" fill-opacity="0.2" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="1075" y="60" fill="#F59E0B" font-size="12" font-weight="600">Event-Driven · Human-in-the-Loop</text>
+
+  <!-- Process Swimlanes -->
+  <rect x="30" y="110" width="1340" height="630" rx="12" fill="#0A1124" stroke="#1E293B" stroke-width="2"/>
+
+  <!-- Step 1: Operational Friction Event -->
+  <g transform="translate(60, 140)" filter="url(#procShadow)">
+    <rect width="280" height="570" rx="8" fill="#0E172E" stroke="#38BDF8" stroke-width="1.5"/>
+    <rect width="280" height="36" rx="8" fill="#38BDF8" fill-opacity="0.15"/>
+    <text x="15" y="24" fill="#38BDF8" font-size="13" font-weight="700">PHASE 1 · SHORTFALL INGESTION</text>
+
+    <!-- Trigger Event -->
+    <rect x="15" y="55" width="250" height="110" rx="6" fill="#141E38" stroke="#38BDF8"/>
+    <text x="25" y="80" fill="#F1F5F9" font-size="13" font-weight="700">Shortfall Event Detected</text>
+    <text x="25" y="102" fill="#94A3B8" font-size="11">• 25,000 unit packaging deficit</text>
+    <text x="25" y="122" fill="#94A3B8" font-size="11">• Inbound supplier delay alert</text>
+    <text x="25" y="145" fill="#38BDF8" font-size="10">Trigger: IoT / Warehouse Webhook</text>
+
+    <!-- Agent 1 Action -->
+    <rect x="15" y="180" width="250" height="230" rx="6" fill="#141E38" stroke="#334155"/>
+    <text x="25" y="205" fill="#38BDF8" font-size="13" font-weight="700">Agent 1: Contract Analysis</text>
+    <text x="25" y="228" fill="#94A3B8" font-size="11">• Pulls co-packer SLA contracts</text>
+    <text x="25" y="250" fill="#94A3B8" font-size="11">• Extracts penalty tiers via Foundry IQ</text>
+    <text x="25" y="272" fill="#94A3B8" font-size="11">• Verifies minimum batch constraints</text>
+    <rect x="25" y="290" width="230" height="50" rx="4" fill="#0A0F1D"/>
+    <text x="35" y="310" fill="#FBBF24" font-size="10">Finding: €12M contract penalty if</text>
+    <text x="35" y="328" fill="#FBBF24" font-size="10">shortfall exceeds 14 calendar days</text>
+    <text x="25" y="365" fill="#10B981" font-size="11">✓ Ingestion complete (&lt;420ms)</text>
+    <text x="25" y="390" fill="#38BDF8" font-size="10">Dispatches payload to Agent 2 ➔</text>
+
+    <!-- State Tag -->
+    <rect x="15" y="430" width="250" height="110" rx="6" fill="#090E1A" stroke="#334155"/>
+    <text x="25" y="455" fill="#FFFFFF" font-size="12" font-weight="600">Identity Boundary Held</text>
+    <text x="25" y="478" fill="#94A3B8" font-size="11">• Agent 1 has Files.Read.All only</text>
+    <text x="25" y="500" fill="#94A3B8" font-size="11">• Cannot read enterprise lakehouse</text>
+    <text x="25" y="522" fill="#10B981" font-size="10">✓ Security invariant: Read-Only</text>
+  </g>
+
+  <!-- Step 2: Semantic Verification -->
+  <g transform="translate(370, 140)" filter="url(#procShadow)">
+    <rect width="300" height="570" rx="8" fill="#0E172E" stroke="#FBBF24" stroke-width="1.5"/>
+    <rect width="300" height="36" rx="8" fill="#FBBF24" fill-opacity="0.15"/>
+    <text x="15" y="24" fill="#FBBF24" font-size="13" font-weight="700">PHASE 2 · ONTOLOGY EVALUATION</text>
+
+    <!-- Agent 2 Action -->
+    <rect x="15" y="55" width="270" height="230" rx="6" fill="#141E38" stroke="#FBBF24"/>
+    <text x="25" y="80" fill="#FBBF24" font-size="13" font-weight="700">Agent 2: Fabric IQ Verification</text>
+    <text x="25" y="105" fill="#94A3B8" font-size="11">• Queries measure: [Realized_Capacity]</text>
+    <text x="25" y="128" fill="#94A3B8" font-size="11">• Checks autoclave sanitization locks</text>
+    <text x="25" y="150" fill="#94A3B8" font-size="11">• Evaluates Line PKG-02 (OEE: 78%)</text>
+    <rect x="25" y="170" width="250" height="60" rx="4" fill="#0A0F1D"/>
+    <text x="35" y="192" fill="#10B981" font-size="11">Result: Line PKG-02 can absorb</text>
+    <text x="35" y="212" fill="#10B981" font-size="11">20,000 units within SLA window</text>
+    <text x="25" y="255" fill="#EF4444" font-size="11">Remaining 5,000 units must be split</text>
+    <text x="25" y="275" fill="#FBBF24" font-size="10">Forwarding plan to Agent 3 ➔</text>
+
+    <!-- Fallback Guard -->
+    <rect x="15" y="300" width="270" height="240" rx="6" fill="#090E1A" stroke="#334155"/>
+    <text x="25" y="325" fill="#FFFFFF" font-size="12" font-weight="600">The Anti-Hallucination Guard</text>
+    <text x="25" y="350" fill="#94A3B8" font-size="11">• Traditional LLM would query raw SQL</text>
+    <text x="25" y="372" fill="#94A3B8" font-size="11">• Misses maintenance schedule tables</text>
+    <text x="25" y="394" fill="#94A3B8" font-size="11">• Hallucinates non-existent lines</text>
+    <text x="25" y="420" fill="#10B981" font-size="11">✓ Governed TMDL ensures mathematical</text>
+    <text x="25" y="440" fill="#10B981" font-size="11">truth grounded in Delta Lakehouse</text>
+    <text x="25" y="475" fill="#38BDF8" font-size="10">Direct Lake latency: 94ms</text>
+    <text x="25" y="515" fill="#10B981" font-size="10">✓ Boundary Invariant: Governed Semantic</text>
+  </g>
+
+  <!-- Step 3: Proposal Staging in Cosmos DB -->
+  <g transform="translate(700, 140)" filter="url(#procShadow)">
+    <rect width="300" height="570" rx="8" fill="#0E172E" stroke="#A855F7" stroke-width="1.5"/>
+    <rect width="300" height="36" rx="8" fill="#A855F7" fill-opacity="0.15"/>
+    <text x="15" y="24" fill="#A855F7" font-size="13" font-weight="700">PHASE 3 · MEMORY &amp; STAGING</text>
+
+    <!-- Agent 3 Staging -->
+    <rect x="15" y="55" width="270" height="230" rx="6" fill="#141E38" stroke="#A855F7"/>
+    <text x="25" y="80" fill="#A855F7" font-size="13" font-weight="700">Agent 3: Decision Memory Stager</text>
+    <text x="25" y="105" fill="#94A3B8" font-size="11">• Generates allocation case_record</text>
+    <text x="25" y="128" fill="#94A3B8" font-size="11">• Encapsulates evidence &amp; calculations</text>
+    <text x="25" y="150" fill="#94A3B8" font-size="11">• Commits to Cosmos DB Decision Memory</text>
+    <rect x="25" y="170" width="250" height="60" rx="4" fill="#0A0F1D"/>
+    <text x="35" y="192" fill="#A855F7" font-size="11">Proposal: Reschedule Batch 8812</text>
+    <text x="35" y="212" fill="#A855F7" font-size="11">State: APPROVED_PENDING_ERP</text>
+    <text x="25" y="255" fill="#EF4444" font-size="11">🛑 ERP API CALL IS REFUSED AT THIS LAYER</text>
+    <text x="25" y="275" fill="#A855F7" font-size="10">Dispatches Adaptive Card to Teams ➔</text>
+
+    <!-- Institutional Memory Guard -->
+    <rect x="15" y="300" width="270" height="240" rx="6" fill="#090E1A" stroke="#334155"/>
+    <text x="25" y="325" fill="#FFFFFF" font-size="12" font-weight="600">Preserving the 'Why'</text>
+    <text x="25" y="350" fill="#94A3B8" font-size="11">• Eliminates Architectural Amnesia</text>
+    <text x="25" y="372" fill="#94A3B8" font-size="11">• Future agents query past trade-offs</text>
+    <text x="25" y="394" fill="#94A3B8" font-size="11">• Separates intended plan from outcome</text>
+    <text x="25" y="420" fill="#10B981" font-size="11">✓ 7-year legal preservation lock</text>
+    <text x="25" y="440" fill="#10B981" font-size="11">protects compliance during audits</text>
+    <text x="25" y="475" fill="#38BDF8" font-size="10">Point read latency: 4ms</text>
+    <text x="25" y="515" fill="#10B981" font-size="10">✓ Boundary Invariant: Immutable Record</text>
+  </g>
+
+  <!-- Step 4: The Human Sovereign Veto Gate -->
+  <g transform="translate(1030, 140)" filter="url(#procShadow)">
+    <rect width="310" height="570" rx="8" fill="#180C14" stroke="#EF4444" stroke-width="2"/>
+    <rect width="310" height="36" rx="8" fill="#EF4444" fill-opacity="0.2"/>
+    <text x="15" y="24" fill="#EF4444" font-size="13" font-weight="700">PHASE 4 · SOVEREIGN VETO GATE</text>
+
+    <!-- Dual Signature Box -->
+    <rect x="15" y="55" width="280" height="190" rx="6" fill="#201018" stroke="#EF4444"/>
+    <text x="25" y="80" fill="#EF4444" font-size="14" font-weight="700">🛑 MANDATORY DUAL-SIGNATURE</text>
+    <text x="25" y="105" fill="#FCA5A5" font-size="11">Teams Copilot Cowork Adaptive Card</text>
+    
+    <rect x="25" y="120" width="260" height="40" rx="4" fill="#0A0F1D"/>
+    <text x="35" y="145" fill="#10B981" font-size="11">Sign-off 1: VP Supply-Chain (Signed)</text>
+
+    <rect x="25" y="170" width="260" height="40" rx="4" fill="#0A0F1D"/>
+    <text x="35" y="195" fill="#10B981" font-size="11">Sign-off 2: Plant Lead (Signed)</text>
+
+    <text x="25" y="232" fill="#10B981" font-size="10">Cryptographic token emitted to ERP dispatcher</text>
+
+    <!-- Production Mutation -->
+    <rect x="15" y="260" width="280" height="150" rx="6" fill="#0F172A" stroke="#10B981"/>
+    <text x="25" y="285" fill="#10B981" font-size="13" font-weight="700">ERP Mutation Executed</text>
+    <text x="25" y="308" fill="#CBD5E1" font-size="11">SAP S/4HANA Master Schedule</text>
+    <text x="25" y="330" fill="#94A3B8" font-size="11">• Batch 8812 rescheduled to PKG-02</text>
+    <text x="25" y="352" fill="#94A3B8" font-size="11">• 20,000 units production locked</text>
+    <text x="25" y="375" fill="#10B981" font-size="11">✓ €12M contract forfeiture prevented</text>
+    <text x="25" y="398" fill="#10B981" font-size="10">Result: 100% Commercial Protection</text>
+
+    <!-- Refusal Rule Box -->
+    <rect x="15" y="430" width="280" height="110" rx="6" fill="#0A0F1D" stroke="#EF4444"/>
+    <text x="25" y="455" fill="#EF4444" font-size="12" font-weight="700">The Non-Negotiable Boundary</text>
+    <text x="25" y="478" fill="#FCA5A5" font-size="11">If either human lead rejects or</text>
+    <text x="25" y="498" fill="#FCA5A5" font-size="11">times out (24h), plan is ABORTED.</text>
+    <text x="25" y="522" fill="#EF4444" font-size="10">Zero unvetted autonomous ERP writes</text>
+  </g>
+
+  <!-- Connective Arrows -->
+  <path d="M 340 260 L 370 260" stroke="#38BDF8" stroke-width="3" stroke-dasharray="4,4"/>
+  <path d="M 670 260 L 700 260" stroke="#FBBF24" stroke-width="3" stroke-dasharray="4,4"/>
+  <path d="M 1000 260 L 1030 260" stroke="#A855F7" stroke-width="3" stroke-dasharray="4,4"/>
+
+  <!-- Footer Banner -->
+  <rect x="30" y="760" width="1340" height="70" rx="8" fill="#0B132B" stroke="#1E293B" stroke-width="1.5"/>
+  <text x="50" y="790" fill="#38BDF8" font-size="13" font-weight="700">BUSINESS VALUE SUMMARY:</text>
+  <text x="50" y="812" fill="#94A3B8" font-size="11">• Decomposing the business process into 3 bounded agents turns a high-risk autonomous hazard into an auditable corporate decision engine</text>
+  <text x="50" y="828" fill="#94A3B8" font-size="11">• Human architects remain the ultimate deterministic gate · Automated AI speed paired with human fiduciary responsibility</text>
+</svg>
