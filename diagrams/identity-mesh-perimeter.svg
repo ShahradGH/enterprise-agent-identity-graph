@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680" style="background:#080D1A; font-family:'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;">
+  <defs>
+    <filter id="boxGlow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Banner -->
+  <rect x="30" y="25" width="1140" height="65" rx="8" fill="#0B132B" stroke="#1E293B" stroke-width="1.5"/>
+  <text x="50" y="65" fill="#FFFFFF" font-size="22" font-weight="700">IDENTITY MESH &amp; LEAST-PRIVILEGE PERIMETER</text>
+  <rect x="940" y="42" width="210" height="30" rx="15" fill="#38BDF8" fill-opacity="0.2" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="965" y="62" fill="#38BDF8" font-size="12" font-weight="600">Pure Microsoft Graph API</text>
+
+  <!-- Planner Identity -->
+  <g transform="translate(50, 115)" filter="url(#boxGlow)">
+    <rect width="240" height="420" rx="10" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5"/>
+    <rect width="240" height="36" rx="10" fill="#38BDF8" fill-opacity="0.15"/>
+    <text x="15" y="24" fill="#38BDF8" font-size="13" font-weight="700">HUMAN OPERATOR</text>
+    <text x="15" y="65" fill="#FFFFFF" font-size="15" font-weight="600">Enterprise Planner</text>
+    <text x="15" y="90" fill="#94A3B8" font-size="11">Entra ID Authenticated</text>
+
+    <rect x="15" y="115" width="210" height="110" rx="6" fill="#0A0F1D" stroke="#334155"/>
+    <text x="25" y="140" fill="#38BDF8" font-size="12" font-weight="700">Bearer Token (JWT)</text>
+    <text x="25" y="165" fill="#CBD5E1" font-size="11">tid: 79b3c106-7fe3...</text>
+    <text x="25" y="190" fill="#CBD5E1" font-size="11">roles: SupplyChain.Planner</text>
+    <text x="25" y="212" fill="#10B981" font-size="10">OBO Flow Enabled</text>
+
+    <rect x="15" y="245" width="210" height="165" rx="6" fill="#0A0F1D" stroke="#334155"/>
+    <text x="25" y="270" fill="#F1F5F9" font-size="12" font-weight="600">Security Invariant</text>
+    <text x="25" y="295" fill="#94A3B8" font-size="11">• No anonymous calls</text>
+    <text x="25" y="320" fill="#94A3B8" font-size="11">• No shared API keys</text>
+    <text x="25" y="345" fill="#94A3B8" font-size="11">• Conditional Access VNet lock</text>
+    <text x="25" y="375" fill="#10B981" font-size="11">✓ Zero Token Leakage</text>
+  </g>
+
+  <!-- Agent 1 Mesh Box -->
+  <g transform="translate(320, 115)" filter="url(#boxGlow)">
+    <rect width="250" height="420" rx="10" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+    <rect width="250" height="36" rx="10" fill="#334155"/>
+    <text x="15" y="24" fill="#F1F5F9" font-size="13" font-weight="700">AGENT 1 BOUNDARY</text>
+    <text x="15" y="65" fill="#38BDF8" font-size="15" font-weight="600">App-Agent-SlaIngest</text>
+    <text x="15" y="90" fill="#94A3B8" font-size="11">SPN: sp-agent-sla-reader</text>
+
+    <rect x="15" y="115" width="220" height="110" rx="6" fill="#0A0F1D" stroke="#10B981"/>
+    <text x="25" y="140" fill="#10B981" font-size="12" font-weight="700">PERMITTED SCOPES</text>
+    <text x="25" y="165" fill="#CBD5E1" font-size="11">• Files.Read.All (Delegated)</text>
+    <text x="25" y="190" fill="#CBD5E1" font-size="11">• SharePoint Document Libs</text>
+    <text x="25" y="212" fill="#10B981" font-size="10">Query-time POSIX ACL Trim</text>
+
+    <rect x="15" y="245" width="220" height="165" rx="6" fill="#1C1014" stroke="#EF4444"/>
+    <text x="25" y="270" fill="#EF4444" font-size="12" font-weight="700">DENIED BOUNDARIES (403)</text>
+    <text x="25" y="295" fill="#FCA5A5" font-size="11">✖ Fabric Dataset Access</text>
+    <text x="25" y="320" fill="#FCA5A5" font-size="11">✖ Cosmos DB Read / Write</text>
+    <text x="25" y="345" fill="#FCA5A5" font-size="11">✖ Direct SQL / ERP Endpoints</text>
+    <text x="25" y="375" fill="#EF4444" font-size="11">BLOCKED: Scope Elevation</text>
+  </g>
+
+  <!-- Agent 2 Mesh Box -->
+  <g transform="translate(600, 115)" filter="url(#boxGlow)">
+    <rect width="250" height="420" rx="10" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+    <rect width="250" height="36" rx="10" fill="#334155"/>
+    <text x="15" y="24" fill="#F1F5F9" font-size="13" font-weight="700">AGENT 2 BOUNDARY</text>
+    <text x="15" y="65" fill="#FBBF24" font-size="15" font-weight="600">App-Agent-CapacityEval</text>
+    <text x="15" y="90" fill="#94A3B8" font-size="11">SPN: sp-agent-fabric-eval</text>
+
+    <rect x="15" y="115" width="220" height="110" rx="6" fill="#0A0F1D" stroke="#10B981"/>
+    <text x="25" y="140" fill="#10B981" font-size="12" font-weight="700">PERMITTED SCOPES</text>
+    <text x="25" y="165" fill="#CBD5E1" font-size="11">• Dataset.Read.All (Delegated)</text>
+    <text x="25" y="190" fill="#CBD5E1" font-size="11">• Fabric Direct Lake TMDL</text>
+    <text x="25" y="212" fill="#10B981" font-size="10">Measure: Realized_Capacity</text>
+
+    <rect x="15" y="245" width="220" height="165" rx="6" fill="#1C1014" stroke="#EF4444"/>
+    <text x="25" y="270" fill="#EF4444" font-size="12" font-weight="700">DENIED BOUNDARIES (403)</text>
+    <text x="25" y="295" fill="#FCA5A5" font-size="11">✖ SharePoint Legal Contracts</text>
+    <text x="25" y="320" fill="#FCA5A5" font-size="11">✖ Direct SQL Query Drop</text>
+    <text x="25" y="345" fill="#FCA5A5" font-size="11">✖ ERP / SAP Batch Writes</text>
+    <text x="25" y="375" fill="#EF4444" font-size="11">BLOCKED: SQL Fallback</text>
+  </g>
+
+  <!-- Agent 3 Mesh Box -->
+  <g transform="translate(880, 115)" filter="url(#boxGlow)">
+    <rect width="270" height="420" rx="10" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+    <rect width="270" height="36" rx="10" fill="#334155"/>
+    <text x="15" y="24" fill="#F1F5F9" font-size="13" font-weight="700">AGENT 3 &amp; ERP VETO GATE</text>
+    <text x="15" y="65" fill="#A855F7" font-size="15" font-weight="600">App-Agent-ErpStager</text>
+    <text x="15" y="90" fill="#94A3B8" font-size="11">SPN: sp-agent-erp-stager</text>
+
+    <rect x="15" y="115" width="240" height="110" rx="6" fill="#0A0F1D" stroke="#10B981"/>
+    <text x="25" y="140" fill="#10B981" font-size="12" font-weight="700">PERMITTED SCOPES</text>
+    <text x="25" y="165" fill="#CBD5E1" font-size="11">• CosmosDB.DataContributor</text>
+    <text x="25" y="190" fill="#CBD5E1" font-size="11">• Partition: [/user_id, /thread_id]</text>
+    <text x="25" y="212" fill="#10B981" font-size="10">Status: APPROVED_PENDING</text>
+
+    <rect x="15" y="245" width="240" height="165" rx="6" fill="#1C1014" stroke="#EF4444" stroke-width="2"/>
+    <text x="25" y="270" fill="#EF4444" font-size="12" font-weight="700">🛑 HUMAN VETO BOUNDARY</text>
+    <text x="25" y="295" fill="#FCA5A5" font-size="11">✖ Direct SAP S/4HANA Write</text>
+    <text x="25" y="320" fill="#FCA5A5" font-size="11">✖ Unvetted Batch Reschedule</text>
+    <text x="25" y="345" fill="#FCA5A5" font-size="11">Requires: VP Dual Signature</text>
+    <text x="25" y="375" fill="#EF4444" font-size="11">BLOCKED: Autonomic Mutation</text>
+  </g>
+
+  <!-- Bottom Footer -->
+  <rect x="30" y="560" width="1140" height="95" rx="8" fill="#0B132B" stroke="#1E293B" stroke-width="1.5"/>
+  <text x="50" y="590" fill="#38BDF8" font-size="14" font-weight="700">MICROSOFT GRAPH GOVERNANCE INVARIANT:</text>
+  <text x="50" y="615" fill="#94A3B8" font-size="12">• Every agent must possess an assigned Entra Service Principal and accountable human owner · Unregistered agents are terminated</text>
+  <text x="50" y="638" fill="#94A3B8" font-size="12">• Automated 4-Step Joiner/Mover/Leaver runbook invalidates SPN tokens, revokes Key Vault access, and archives memory threads</text>
+</svg>
