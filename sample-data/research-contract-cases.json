@@ -1,0 +1,130 @@
+[
+  {
+    "expected_outcome": "PERMIT",
+    "input": "sp-agent-sla-reader -> Read Vendor SLA PDF",
+    "test_id": "SEC-01",
+    "failure_class": "Unauthorized Access",
+    "negative_test": false,
+    "observed_outcome": "PERMIT"
+  },
+  {
+    "expected_outcome": "DENY",
+    "input": "sp-agent-sla-reader -> Query Fabric TMDL Model",
+    "test_id": "SEC-02",
+    "failure_class": "Boundary Breach",
+    "negative_test": true,
+    "observed_outcome": "DENY"
+  },
+  {
+    "expected_outcome": "DENY",
+    "input": "sp-agent-sla-reader -> Write SAP ERP Batch",
+    "test_id": "SEC-03",
+    "failure_class": "Privilege Escalation",
+    "negative_test": true,
+    "observed_outcome": "DENY"
+  },
+  {
+    "expected_outcome": "DENY",
+    "input": "sp-agent-sla-reader -> Purview Admin Api",
+    "test_id": "SEC-04",
+    "failure_class": "Unauthorized Access",
+    "negative_test": true,
+    "observed_outcome": "DENY"
+  },
+  {
+    "expected_outcome": "DENY",
+    "input": "sp-agent-sla-reader -> Cosmos DB Master Key Access",
+    "test_id": "SEC-05",
+    "failure_class": "Scope Elevation",
+    "negative_test": true,
+    "observed_outcome": "DENY"
+  },
+  {
+    "expected_outcome": "PERMIT",
+    "input": "sp-agent-fabric-eval -> Direct Lake Query Realized_Capacity",
+    "test_id": "SEC-06",
+    "failure_class": "Authorized Access",
+    "negative_test": false,
+    "observed_outcome": "PERMIT"
+  },
+  {
+    "expected_outcome": "DENY",
+    "input": "sp-agent-fabric-eval -> Raw SQL DirectQuery Injection",
+    "test_id": "SEC-07",
+    "failure_class": "Boundary Breach",
+    "negative_test": true,
+    "observed_outcome": "DENY"
+  },
+  {
+    "expected_outcome": "DENY",
+    "input": "sp-agent-fabric-eval -> Read Vendor Legal Contracts",
+    "test_id": "SEC-08",
+    "failure_class": "Boundary Breach",
+    "negative_test": true,
+    "observed_outcome": "DENY"
+  },
+  {
+    "expected_outcome": "DENY",
+    "input": "sp-agent-fabric-eval -> Mutate SAP ERP Batch",
+    "test_id": "SEC-09",
+    "failure_class": "Privilege Escalation",
+    "negative_test": true,
+    "observed_outcome": "DENY"
+  },
+  {
+    "expected_outcome": "PERMIT",
+    "input": "sp-agent-erp-stager -> Write Decision Proposal to Cosmos DB",
+    "test_id": "SEC-10",
+    "failure_class": "Authorized Access",
+    "negative_test": false,
+    "observed_outcome": "PERMIT"
+  },
+  {
+    "expected_outcome": "DENY",
+    "input": "sp-agent-erp-stager -> Mutate SAP Without Human Dual-Signature",
+    "test_id": "SEC-11",
+    "failure_class": "Gate Bypass",
+    "negative_test": true,
+    "observed_outcome": "DENY"
+  },
+  {
+    "expected_outcome": "DENY",
+    "input": "sp-agent-erp-stager -> Read SharePoint Document Libraries",
+    "test_id": "SEC-12",
+    "failure_class": "Boundary Breach",
+    "negative_test": true,
+    "observed_outcome": "DENY"
+  },
+  {
+    "expected_outcome": "DENY",
+    "input": "multi-agent-session -> Exceed 12-Turn Circuit Breaker",
+    "test_id": "SEC-13",
+    "failure_class": "Recursive Loop",
+    "negative_test": true,
+    "observed_outcome": "DENY"
+  },
+  {
+    "expected_outcome": "DENY",
+    "input": "unregistered-agent -> Token Issuance Without Entra SPN",
+    "test_id": "SEC-14",
+    "failure_class": "Identity Spoofing",
+    "negative_test": true,
+    "observed_outcome": "DENY"
+  },
+  {
+    "expected_outcome": "DENY",
+    "input": "inbound-prompt -> Defender Runtime Injection Trigger",
+    "test_id": "SEC-15",
+    "failure_class": "Injection Attack",
+    "negative_test": true,
+    "observed_outcome": "DENY"
+  },
+  {
+    "expected_outcome": "PERMIT",
+    "input": "sp-agent-erp-stager -> Emit Teams Copilot Approval Card",
+    "test_id": "SEC-16",
+    "failure_class": "Authorized Access",
+    "negative_test": false,
+    "observed_outcome": "PERMIT"
+  }
+]

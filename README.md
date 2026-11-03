@@ -1,9 +1,10 @@
 # Enterprise Agent Identity Graph Mesh
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Verification: 16-Test Pester Matrix](https://img.shields.io/badge/Pester_Tests-16_Passed-success)](tests/AgentIdentityMesh.Tests.ps1)
 [![Microsoft Graph v2.x](https://img.shields.io/badge/Microsoft%20Graph-v2.x-0078D4.svg)](https://learn.microsoft.com/en-us/graph/)
 [![Entra ID Governance](https://img.shields.io/badge/Entra%20ID-Workload%20Identities-10B981.svg)](https://learn.microsoft.com/en-us/entra/workload-id/)
-[![Verification Status](https://img.shields.io/badge/Quality%20Gate-20%2F20%20Pass-brightgreen.svg)](docs/VERIFICATION-EVIDENCE.md)
+[![Verification Status](https://img.shields.io/badge/Quality%20Gate-16%2F16%20Pass-brightgreen.svg)](docs/VERIFICATION-EVIDENCE.md)
 
 Production-grade **Microsoft Graph PowerShell (v2.x) & Entra ID Workload Identity Governance Suite** for orchestrating, securing, and operating multi-agent enterprise AI pipelines.
 
@@ -73,6 +74,10 @@ All identities are provisioned and managed strictly through **Microsoft Graph**,
 ├── diagnostics/
 │   ├── AgentTelemetryDiagnostics.kql     # Production KQL queries for W3C traceparent waterfalls
 │   └── Import-Agent365Telemetry.ps1      # Agent 365 fleet health and loop breaker monitor
+├── sample-data/
+│   └── research-contract-cases.json      # 16 deterministic contract test fixtures
+├── tests/
+│   └── AgentIdentityMesh.Tests.ps1       # 16-test Pester matrix validating least-privilege contracts
 ├── diagrams/
 │   ├── azure-stencil-architecture-topology.svg   # 3-agent pipeline and Landing Zone topology
 │   ├── azure-stencil-architecture-topology.png   # High-resolution companion raster
@@ -85,6 +90,7 @@ All identities are provisioned and managed strictly through **Microsoft Graph**,
 ├── docs/
 │   ├── IT-RUN-OPERATIONS.md              # L2/L3 support guide for diagnosing handoff errors
 │   └── VERIFICATION-EVIDENCE.md          # 16-test deterministic tool authority matrix report
+├── LICENSE                               # MIT License
 └── README.md                             # Architectural overview and operational instructions
 ```
 
@@ -99,6 +105,12 @@ All identities are provisioned and managed strictly through **Microsoft Graph**,
   Install-Module Microsoft.Graph -Scope CurrentUser -Repository PSGallery -Force
   ```
 * Entra ID Permissions: `Application.ReadWrite.All`, `AppRoleAssignment.ReadWrite.All`, `Directory.ReadWrite.All`.
+
+### Automated Test Matrix (16/16 Pester Suite)
+Run the offline deterministic Pester suite to validate all 16 tool authority boundary contracts against `sample-data/research-contract-cases.json`:
+```powershell
+Invoke-Pester -Path ./tests/AgentIdentityMesh.Tests.ps1 -Output Detailed
+```
 
 ### Quick Deployment
 1. Authenticate to Microsoft Graph:
