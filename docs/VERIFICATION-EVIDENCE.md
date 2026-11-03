@@ -1,16 +1,16 @@
-﻿# tool authority matrix
+# tool authority matrix
 
 Generated: 2026-10-28
 Evidence mode: deterministic synthetic local fixture
 Live Microsoft service evidence: not collected
 Scenario: Multi-Agent Supply-Chain Allocation & CapEx Governed Release
 Decision owner: Platform Engineering Lead
-Input: `.local/ideas/001-frontier-agent-governance-graph/repo-assets/sample-data/research-contract-cases.json`
+Input: `sample-data/research-contract-cases.json`
 Input SHA-256: `8475cea6256452b4c14c707992f19418a91d1c6264d853a3b34741b2da728f29`
 Case boundary: expected 16; observed 16
 Negative cases: 12
 Observed mismatches: 0
-Validation: `powershell -NoProfile -ExecutionPolicy Bypass -File tools/Test-IdeaEvidence.ps1 -IdeaFolder .local/ideas/001-frontier-agent-governance-graph`
+Validation: `powershell -NoProfile -ExecutionPolicy Bypass -File identity/Test-AgentGraphBoundaries.ps1`
 
 ## Decision
 
