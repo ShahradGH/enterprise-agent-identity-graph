@@ -1,0 +1,13 @@
+name: Identity Mesh Verification
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+jobs:
+  pester:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - shell: pwsh
+        run: Invoke-Pester -Path ./tests/AgentIdentityMesh.Tests.ps1 -Output Detailed

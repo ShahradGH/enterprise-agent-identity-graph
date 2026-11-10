@@ -1,0 +1,39 @@
+// ==============================================================================
+// Microsoft Agent 365 & Application Insights Diagnostic Queries
+// For IT Platform Engineering & L2/L3 Run Operations
+// ==============================================================================
+
+// 1. Traceparent Multi-Agent Distributed Waterfall
+// Correlates execution handoffs across Agent 1 -> Agent 2 -> Agent 3
+AppDependencies
+| where AppRoleName in ("App-Agent-SlaIngest", "App-Agent-CapacityEval", "App-Agent-ErpStager")
+| project 
+    Timestamp = TimeGenerated,
+    TraceId = OperationId,
+    SpanId = Id,
+    ParentSpan = ParentId,
+    Agent = AppRoleName,
+    Target = Target,
+    DurationMs = DurationMs,
+    Success = Success,
+    ResultCode = ResultCode
+| order by Timestamp asc;
+
+// 2. Recursive Loop Circuit-Breaker Alert (Threshold: > 12 Turns)
+AppEvents
+| where Name == "AgentTurnExecution"
+| extend SessionId = tostring(customDimensions.sessionId)
+| summarize TurnCount = count() by SessionId, bin(TimeGenerated, 5m)
+| where TurnCount >= 12
+| project SessionId, TurnCount, Alert = "CRITICAL: Agent recursive negotiation loop limit exceeded! Execution frozen."
+
+// 3. Tool Authority Rejection Audit (HTTP 403 Boundary Breaches)
+AppRequests
+| where ResultCode in ("401", "403")
+| project 
+    Timestamp = TimeGenerated,
+    AgentAppId = tostring(customDimensions.clientAppId),
+    AttemptedOperation = Name,
+    ResultCode = ResultCode,
+    ClientIP = ClientIP
+| order by Timestamp desc;

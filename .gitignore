@@ -1,0 +1,19 @@
+# System & Editor
+.DS_Store
+Thumbs.db
+*.tmp
+*.log
+.vscode/
+.idea/
+
+# Local Git Hooks & Staging
+.githooks/
+
+# Node & Package Managers
+node_modules/
+package-lock.json
+
+# Test Artifacts
+TestResults/
+*.trx
+

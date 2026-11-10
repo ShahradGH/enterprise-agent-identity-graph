@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080" style="background:#070d1e; font-family:'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;">
+  <defs>
+    <linearGradient id="headerGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00D2FF" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#3B82F6" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0.8"/>
+    </linearGradient>
+    <linearGradient id="planeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#1E293B" stop-opacity="0.7"/>
+    </linearGradient>
+    <filter id="boxShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Title & Banner Header -->
+  <rect x="40" y="30" width="1840" height="80" rx="12" fill="#0b1329" stroke="#1e293b" stroke-width="2"/>
+  <text x="70" y="78" fill="#FFFFFF" font-size="28" font-weight="700" letter-spacing="0.5">UNIFIED 6-PLANE PRODUCTION AGENTIC TOPOLOGY</text>
+  <text x="820" y="78" fill="#94A3B8" font-size="16">Microsoft Frontier Tour 2026–2027 Architectural Reference &amp; Dynamic Governance Mesh</text>
+  <rect x="1600" y="52" width="250" height="36" rx="18" fill="#10B981" fill-opacity="0.2" stroke="#10B981" stroke-width="1.5"/>
+  <text x="1635" y="76" fill="#10B981" font-size="14" font-weight="600">✓ Entra ID Mesh Certified</text>
+
+  <!-- Plane 1: Experience & Ingress -->
+  <g transform="translate(60, 140)" filter="url(#boxShadow)">
+    <rect width="570" height="260" rx="14" fill="url(#planeGrad)" stroke="#38BDF8" stroke-width="1.5"/>
+    <rect x="0" y="0" width="570" height="42" rx="14" fill="#38BDF8" fill-opacity="0.15"/>
+    <text x="24" y="28" fill="#38BDF8" font-size="16" font-weight="700">PLANE 1 · EXPERIENCE &amp; AUTHORISATION</text>
+    <text x="24" y="75" fill="#E2E8F0" font-size="18" font-weight="600">Teams Copilot Cowork &amp; Web Studio</text>
+    <text x="24" y="105" fill="#94A3B8" font-size="13">• Planner Identity: Entra ID OAuth 2.0 Bearer JWT (OBO Flow)</text>
+    <text x="24" y="130" fill="#94A3B8" font-size="13">• Interactive Cowork Surface: Shared operational canvas</text>
+    <text x="24" y="155" fill="#94A3B8" font-size="13">• Real-Time Push: Sub-second shortfall notifications</text>
+    <rect x="24" y="190" width="522" height="45" rx="8" fill="#0A0F1D" stroke="#1E293B"/>
+    <text x="40" y="218" fill="#38BDF8" font-size="13" font-family="monospace">Claim: scp="Decision.Initiate" | tid="79b3c106..."</text>
+  </g>
+
+  <!-- Plane 2: Runtime Fleet -->
+  <g transform="translate(675, 140)" filter="url(#boxShadow)">
+    <rect width="570" height="260" rx="14" fill="url(#planeGrad)" stroke="#818CF8" stroke-width="1.5"/>
+    <rect x="0" y="0" width="570" height="42" rx="14" fill="#818CF8" fill-opacity="0.15"/>
+    <text x="24" y="28" fill="#818CF8" font-size="16" font-weight="700">PLANE 2 · GOVERNED AGENT FLEET (FOUNDRY &amp; 365)</text>
+    
+    <!-- Agent 1 Sub-box -->
+    <rect x="20" y="60" width="165" height="175" rx="8" fill="#0A0F1D" stroke="#334155"/>
+    <text x="32" y="85" fill="#38BDF8" font-size="13" font-weight="700">1. SLA Ingest</text>
+    <text x="32" y="110" fill="#94A3B8" font-size="11">sp-agent-sla-reader</text>
+    <text x="32" y="135" fill="#CBD5E1" font-size="11">Files.Read.All</text>
+    <text x="32" y="160" fill="#94A3B8" font-size="10">POSIX ACL Trim</text>
+    <rect x="32" y="195" width="140" height="24" rx="4" fill="#38BDF8" fill-opacity="0.2"/>
+    <text x="45" y="212" fill="#38BDF8" font-size="11" font-weight="600">ReadOnly Contract</text>
+
+    <!-- Agent 2 Sub-box -->
+    <rect x="202" y="60" width="165" height="175" rx="8" fill="#0A0F1D" stroke="#334155"/>
+    <text x="214" y="85" fill="#FBBF24" font-size="13" font-weight="700">2. Capacity Eval</text>
+    <text x="214" y="110" fill="#94A3B8" font-size="11">sp-agent-fabric-eval</text>
+    <text x="214" y="135" fill="#CBD5E1" font-size="11">Dataset.Read.All</text>
+    <text x="214" y="160" fill="#94A3B8" font-size="10">Direct Lake TMDL</text>
+    <rect x="214" y="195" width="140" height="24" rx="4" fill="#FBBF24" fill-opacity="0.2"/>
+    <text x="235" y="212" fill="#FBBF24" font-size="11" font-weight="600">Zero Raw SQL</text>
+
+    <!-- Agent 3 Sub-box -->
+    <rect x="384" y="60" width="165" height="175" rx="8" fill="#0A0F1D" stroke="#334155"/>
+    <text x="396" y="85" fill="#F43F5E" font-size="13" font-weight="700">3. ERP Stager</text>
+    <text x="396" y="110" fill="#94A3B8" font-size="11">sp-agent-erp-stager</text>
+    <text x="396" y="135" fill="#CBD5E1" font-size="11">Cosmos.DataContrib</text>
+    <text x="396" y="160" fill="#94A3B8" font-size="10">Pending Stage</text>
+    <rect x="396" y="195" width="140" height="24" rx="4" fill="#F43F5E" fill-opacity="0.2"/>
+    <text x="412" y="212" fill="#F43F5E" font-size="11" font-weight="600">Write Isolated</text>
+  </g>
+
+  <!-- Plane 3: Context & Grounding (Microsoft IQ) -->
+  <g transform="translate(1290, 140)" filter="url(#boxShadow)">
+    <rect width="570" height="260" rx="14" fill="url(#planeGrad)" stroke="#10B981" stroke-width="1.5"/>
+    <rect x="0" y="0" width="570" height="42" rx="14" fill="#10B981" fill-opacity="0.15"/>
+    <text x="24" y="28" fill="#10B981" font-size="16" font-weight="700">PLANE 3 · CONTEXT &amp; GROUNDING (MICROSOFT IQ)</text>
+    <text x="24" y="75" fill="#E2E8F0" font-size="18" font-weight="600">Foundry IQ + Fabric IQ Semantic Layer</text>
+    <text x="24" y="105" fill="#94A3B8" font-size="13">• Foundry IQ: POSIX ACL query-time security trimming</text>
+    <text x="24" y="130" fill="#94A3B8" font-size="13">• Fabric IQ: Direct Lake VertiPaq in-memory execution (&lt;120ms)</text>
+    <text x="24" y="155" fill="#94A3B8" font-size="13">• Governed TMDL measure: [Realized_Capacity] (zero column confusion)</text>
+    <rect x="24" y="190" width="522" height="45" rx="8" fill="#0A0F1D" stroke="#1E293B"/>
+    <text x="40" y="218" fill="#10B981" font-size="13" font-family="monospace">DAX: CALCULATE(SUM('PackagingLine'[OEE]), 'Line'[Status]=="Active")</text>
+  </g>
+
+  <!-- Plane 4: Decision Memory Plane -->
+  <g transform="translate(60, 440)" filter="url(#boxShadow)">
+    <rect width="570" height="260" rx="14" fill="url(#planeGrad)" stroke="#A855F7" stroke-width="1.5"/>
+    <rect x="0" y="0" width="570" height="42" rx="14" fill="#A855F7" fill-opacity="0.15"/>
+    <text x="24" y="28" fill="#A855F7" font-size="16" font-weight="700">PLANE 4 · DECISION MEMORY (AZURE COSMOS DB)</text>
+    <text x="24" y="75" fill="#E2E8F0" font-size="18" font-weight="600">Hierarchical MultiHash Decision Store</text>
+    <text x="24" y="105" fill="#94A3B8" font-size="13">• Partition Key: [/tenant_id, /agent_id, /session_id] (4ms p99 read)</text>
+    <text x="24" y="130" fill="#94A3B8" font-size="13">• case_records: Captures full 'Why' rationale and mathematical proof</text>
+    <text x="24" y="155" fill="#94A3B8" font-size="13">• State Lifecycle: ACTIVE ➔ APPROVED_PENDING_ERP ➔ COMMITTED</text>
+    <rect x="24" y="190" width="522" height="45" rx="8" fill="#0A0F1D" stroke="#1E293B"/>
+    <text x="40" y="218" fill="#A855F7" font-size="13" font-family="monospace">Audit Lock: 7-Year Legal Preservation Hold Enabled</text>
+  </g>
+
+  <!-- Plane 5: System of Record & Veto Gate -->
+  <g transform="translate(675, 440)" filter="url(#boxShadow)">
+    <rect width="1185" height="260" rx="14" fill="url(#planeGrad)" stroke="#EF4444" stroke-width="1.5"/>
+    <rect x="0" y="0" width="1185" height="42" rx="14" fill="#EF4444" fill-opacity="0.15"/>
+    <text x="24" y="28" fill="#EF4444" font-size="16" font-weight="700">PLANE 5 · SYSTEM OF RECORD &amp; THE HUMAN SOVEREIGN VETO GATE</text>
+    
+    <!-- Human Gate Box -->
+    <rect x="30" y="65" width="480" height="170" rx="10" fill="#1C1014" stroke="#EF4444" stroke-width="2"/>
+    <text x="50" y="98" fill="#EF4444" font-size="18" font-weight="700">🛑 HUMAN ARCHITECTURAL GATE</text>
+    <text x="50" y="125" fill="#FCA5A5" font-size="14" font-weight="600">Mandatory Dual-Signature Sign-Off Required</text>
+    <text x="50" y="152" fill="#94A3B8" font-size="13">Sign-off 1: VP Supply-Chain (Commercial Approval)</text>
+    <text x="50" y="176" fill="#94A3B8" font-size="13">Sign-off 2: Plant Operations Lead (Autoclave Safety Check)</text>
+    <text x="50" y="205" fill="#EF4444" font-size="12" font-weight="600">Rule: Agents CANNOT write to ERP without cryptographic approval tokens.</text>
+
+    <!-- SAP S/4HANA Box -->
+    <rect x="540" y="65" width="615" height="170" rx="10" fill="#0A0F1D" stroke="#334155"/>
+    <text x="565" y="98" fill="#FFFFFF" font-size="18" font-weight="700">SAP S/4HANA &amp; Azure SQL Master Estate</text>
+    <text x="565" y="125" fill="#94A3B8" font-size="13">• Master Production Scheduling (MPS) batch reschedule</text>
+    <text x="565" y="150" fill="#94A3B8" font-size="13">• Production batch 8812 reallocated: 20,000 units to PKG-02</text>
+    <text x="565" y="175" fill="#94A3B8" font-size="13">• €12M commercial contract forfeiture strictly prevented</text>
+    <rect x="565" y="195" width="560" height="28" rx="4" fill="#10B981" fill-opacity="0.2"/>
+    <text x="585" y="214" fill="#10B981" font-size="12" font-weight="600">Status: BATCH COMMITTED ONLY AFTER DUAL SIGNATURE</text>
+  </g>
+
+  <!-- Plane 6: Dynamic Connective Flows -->
+  <g transform="translate(60, 740)" filter="url(#boxShadow)">
+    <rect width="1800" height="280" rx="14" fill="#080E21" stroke="#F59E0B" stroke-width="2"/>
+    <rect x="0" y="0" width="1800" height="42" rx="14" fill="#F59E0B" fill-opacity="0.15"/>
+    <text x="24" y="28" fill="#F59E0B" font-size="16" font-weight="700">PLANE 6 · END-TO-END DYNAMIC CONNECTIVE FLOWS &amp; GOVERNANCE MESH</text>
+
+    <!-- Flow A -->
+    <rect x="30" y="60" width="550" height="195" rx="10" fill="#131B33" stroke="#F59E0B"/>
+    <text x="50" y="90" fill="#F59E0B" font-size="16" font-weight="700">⚡ Flow A: Business Decision Flow</text>
+    <text x="50" y="120" fill="#E2E8F0" font-size="13">1. Shortfall event (25k units) triggers SLA Ingest Agent</text>
+    <text x="50" y="145" fill="#E2E8F0" font-size="13">2. Agent 1 extracts penalty terms ➔ queries Capacity Agent</text>
+    <text x="50" y="170" fill="#E2E8F0" font-size="13">3. Agent 2 verifies line PKG-02 clean window in Fabric IQ</text>
+    <text x="50" y="195" fill="#E2E8F0" font-size="13">4. Agent 3 posts Teams Dual-Sign Card ➔ Human Approval ➔ SAP</text>
+
+    <!-- Flow B -->
+    <rect x="625" y="60" width="550" height="195" rx="10" fill="#131B33" stroke="#38BDF8"/>
+    <text x="645" y="90" fill="#38BDF8" font-size="16" font-weight="700">🔐 Flow B: Identity &amp; Token Mesh Flow</text>
+    <text x="645" y="120" fill="#E2E8F0" font-size="13">1. Entra ID Graph provisions 3 distinct App Registrations</text>
+    <text x="645" y="145" fill="#E2E8F0" font-size="13">2. Workload Identity federation injects ephemeral tokens</text>
+    <text x="645" y="170" fill="#E2E8F0" font-size="13">3. Delegated OBO propagation enforces POSIX ACL trimming</text>
+    <text x="645" y="195" fill="#E2E8F0" font-size="13">4. Agent 365 monitors zero zombie agents &amp; offboarding lifecycle</text>
+
+    <!-- Flow C -->
+    <rect x="1220" y="60" width="550" height="195" rx="10" fill="#131B33" stroke="#A855F7"/>
+    <text x="1240" y="90" fill="#A855F7" font-size="16" font-weight="700">🛡️ Flow C: IT Telemetry &amp; Circuit Breaker Flow</text>
+    <text x="1240" y="120" fill="#E2E8F0" font-size="13">1. W3C traceparent headers injected across all agent handoffs</text>
+    <text x="1240" y="145" fill="#E2E8F0" font-size="13">2. Application Insights correlates end-to-end turn latencies</text>
+    <text x="1240" y="170" fill="#E2E8F0" font-size="13">3. Hard 12-turn circuit breaker kills rogue negotiation loops</text>
+    <text x="1240" y="195" fill="#E2E8F0" font-size="13">4. Defender for Cloud runtime shield intercepts prompt injections</text>
+  </g>
+</svg>
