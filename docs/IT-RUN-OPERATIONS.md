@@ -25,7 +25,7 @@ AppDependencies
 | order by Timestamp asc
 ```
 * **HTTP 403 Forbidden on Agent 1**: Expected if Agent 1 attempts to query relational data. Check if caller injected unauthorized prompt parameters.
-* **DurationMs > 800ms on Agent 2**: Indicates Fabric Direct Lake fallback to DirectQuery. Check if Delta tables require optimization (`OPTIMIZE` / `VACUUM`).
+* **DurationMs > 800ms on Agent 2**: Indicates Fabric Direct Lake fallback to DirectQuery. Check if Delta tables require optimisation (`OPTIMISE` / `VACUUM`).
 
 ---
 

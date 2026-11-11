@@ -137,4 +137,4 @@ This suite injects W3C `traceparent` headers across all inter-agent handoffs. Us
 ---
 
 ## Contributing & License
-Licensed under the [MIT License](LICENSE). Contributions adhering to the Avanade UK Azure Platform Practice architectural standard are welcome via Pull Request.
+Licensed under the [MIT License](LICENSE). Contributions adhering to the Sovereign UK Azure Platform Practice architectural standard are welcome via Pull Request.
