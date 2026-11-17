@@ -25,7 +25,7 @@ jobs:
 
       - name: Run Trivy (CRITICAL fixable vuln & misconfig)
         run: |
-          TRIVY_VER=$(curl -sf https://api.github.com/repos/aquasecurity/trivy/releases/latest | jq -r '.tag_name | ltrimstr("v")')
+          TRIVY_VER="0.76.2"
           curl -sfL "https://github.com/aquasecurity/trivy/releases/download/v${TRIVY_VER}/trivy_${TRIVY_VER}_Linux-64bit.tar.gz" -o /tmp/trivy.tar.gz
           tar -xzf /tmp/trivy.tar.gz -C /tmp trivy
           sudo mv /tmp/trivy /usr/local/bin/trivy
